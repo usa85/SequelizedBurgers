@@ -1,0 +1,20 @@
+jumbotron {
+  color: yellow;
+  background-color: antiquewhite;
+  background-image: url(../img/burger/512x512.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body {
+  font-family: 'Roboto Open Sans Condensed sans-serif';
+  font-size: 2rem;
+  color: rgb(100, 12, 12);
+  background-color: rgb(194, 178, 126);
+}
+.eat-burger:hover, .add-burger:hover, .delete-burger:hover {
+  opacity: 0.8;
+}
+
+.alert {
+  font-size: 1rem;
+}

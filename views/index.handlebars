@@ -1,0 +1,70 @@
+<div class = "container">
+	<div class = "jumbotron">
+		<div class = "jumbotrondiv">
+			<div><h1 class="text-center display-4">Best Burger In the World!</h1></div>
+		</div>
+	</div>
+
+	{{!-- Available Burgers --}}
+	<div class="row style="width:80%;">
+		<div class="col-md">
+			<h2 class="text-center">Menu</h2>
+			<hr>
+			{{#each burgers}}
+				{{#unless devoured}}
+					{{> burgers/burger-block this}}
+				{{/unless}}
+			{{/each}}
+		</div>
+
+		{{!-- Burgers that have been devoured --}}
+		<div class="col-md">
+			<h2 class="text-center">Given to Client</h2>
+			<hr>
+			{{#each burgers}}
+				{{#if devoured}}
+					{{> burgers/burger-block this}}
+				{{/if}}
+			{{/each}}
+		</div>
+	</div>
+
+	{{!-- Alert element --}}
+	<div class="alert alert-danger collapse mt-2" id="burgerAlert" role="alert">
+		<a href="#" class="close">&times;</a>
+		<strong>Note!</strong> Please enter a new burger name.
+	</div>
+
+	{{!-- Add a burger --}}
+	<div class="row  d-flex justify-content-center mt-2">
+		<form>
+			<div class="form-row align-items-center">
+				<div class="col-auto">
+					<input type="text" class="form-control form-control-lg validate mb-2" id="burgerInput" placeholder="Classic Burger">
+				</div>
+				<div class="col">
+					<img class="add-burger" src="assets/img/plusFlat/64x64.png">
+    		</div>
+  		</div>
+		</form>
+	</div>
+	
+	{{!-- Modal --}}
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      {{!-- Modal content --}}
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="saveChanges" class="btn btn-success" data-dismiss="modal" data-key="">Eat Burger</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
