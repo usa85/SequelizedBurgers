@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vdelariva/sequelizedBurger.git"
+    "url": "git+https://github.com/usa85/sequelizedBurger.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vdelariva/sequelizedBurger/issues"
+    "url": "https://github.com/usa85/sequelizedBurger/issues"
   },
-  "homepage": "https://github.com/vdelariva/sequelizedBurger#readme",
+  "homepage": "https://github.com/usa85/sequelizedBurger#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
